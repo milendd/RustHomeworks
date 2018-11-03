@@ -1,5 +1,3 @@
-#![allow(non_snake_case)]
-
 /// Необходимо е CodeIdentifier да имплементира Debug, за да можем да го
 /// използваме в тестови assertion-и.
 ///

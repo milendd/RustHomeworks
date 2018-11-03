@@ -1,0 +1,6 @@
+[package]
+name = "solution"
+version = "0.1.0"
+authors = ["Milen Donchev <milen_d@abv.bg>"]
+
+[dependencies]
