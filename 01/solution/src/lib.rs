@@ -31,7 +31,7 @@ impl CodeIdentifier {
     pub fn camelcase(&self) -> String {
         let res = Self::titlecase(&self);
         let first = res.chars().next().unwrap().to_string().to_lowercase();
-        let last = res[1..].to_string();
+        let last: String = res.chars().skip(1).collect();
         [first, last].join("")
     }
 
@@ -44,7 +44,7 @@ impl CodeIdentifier {
         let result: Vec<String> = v.iter()
             .map(|x| 
                 // first to upper and the rest
-                [x.chars().next().unwrap().to_string().to_uppercase(), x[1..].to_string()]
+                [x.chars().next().unwrap().to_string().to_uppercase(), x.chars().skip(1).collect()]
                 .join("")
             )
             .collect();
