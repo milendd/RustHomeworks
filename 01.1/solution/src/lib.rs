@@ -20,6 +20,6 @@ impl FromStr for CodeStyle {
     type Err = CodeStyleError;
 
     fn from_str(_identifier: &str) -> Result<CodeStyle, CodeStyleError> {
-        unimplemented!()
+        Ok(CodeStyle::Underscored)
     }
 }
